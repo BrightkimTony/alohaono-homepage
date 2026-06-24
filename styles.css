@@ -27,6 +27,11 @@
   --coral: #d9604b;
   --line: rgba(23, 21, 19, 0.14);
   --shadow: 0 28px 80px rgba(27, 20, 12, 0.22);
+  --measure: 36rem;
+  --measure-wide: 48rem;
+  --lh-tight: 1.1;
+  --lh-title: 1.16;
+  --lh-body: 1.72;
   font-family: "Paperlogy", system-ui, sans-serif;
 }
 
@@ -44,6 +49,7 @@ body {
   color: var(--ink);
   text-rendering: optimizeLegibility;
   word-break: keep-all;
+  letter-spacing: 0;
 }
 
 a {
@@ -81,6 +87,7 @@ textarea {
   align-items: center;
   gap: 10px;
   font-weight: 800;
+  line-height: 1;
 }
 
 .brand-mark {
@@ -100,6 +107,7 @@ textarea {
   color: rgba(255, 249, 237, 0.78);
   font-size: 15px;
   font-weight: 600;
+  line-height: 1;
 }
 
 .site-nav a {
@@ -150,7 +158,7 @@ textarea {
 .hero-content {
   position: relative;
   z-index: 1;
-  width: min(860px, 100%);
+  width: min(980px, 100%);
   padding: 160px clamp(22px, 6vw, 86px) clamp(88px, 10vw, 132px);
 }
 
@@ -158,26 +166,27 @@ textarea {
 .section-kicker {
   margin: 0;
   color: #f8be68;
-  font-size: 14px;
+  font-size: clamp(12px, 1vw, 14px);
   font-weight: 800;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
 .hero h1 {
   margin: 14px 0 20px;
-  max-width: 11em;
-  font-size: clamp(46px, 7.3vw, 104px);
+  max-width: 10.8em;
+  font-size: clamp(38px, 5.2vw, 72px);
   font-weight: 800;
-  line-height: 1.02;
+  line-height: var(--lh-tight);
   letter-spacing: 0;
 }
 
 .hero p:not(.eyebrow) {
-  max-width: 680px;
+  max-width: var(--measure-wide);
   margin: 0;
   color: rgba(255, 249, 237, 0.84);
-  font-size: clamp(18px, 2vw, 24px);
-  line-height: 1.62;
+  font-size: clamp(17px, 1.65vw, 22px);
+  line-height: var(--lh-body);
 }
 
 .hero-actions,
@@ -196,7 +205,9 @@ textarea {
   padding: 0 22px;
   border: 1px solid var(--line);
   border-radius: 999px;
+  font-size: clamp(15px, 1.1vw, 17px);
   font-weight: 800;
+  line-height: 1;
   cursor: pointer;
 }
 
@@ -235,14 +246,16 @@ textarea {
 .hero-card strong {
   display: block;
   margin: 14px 0 10px;
-  font-size: 30px;
-  line-height: 1.08;
+  max-width: 10em;
+  font-size: clamp(24px, 2.4vw, 32px);
+  line-height: var(--lh-title);
 }
 
 .hero-card p {
   margin: 0;
+  max-width: 28ch;
   color: rgba(255, 249, 237, 0.76);
-  line-height: 1.6;
+  line-height: var(--lh-body);
 }
 
 .intro,
@@ -265,19 +278,21 @@ textarea {
 .view-copy h2,
 .reserve-copy h2 {
   margin: 10px 0 0;
-  max-width: 12em;
-  font-size: clamp(30px, 4vw, 56px);
+  max-width: 11.5em;
+  font-size: clamp(28px, 3.4vw, 46px);
   font-weight: 800;
-  line-height: 1.08;
+  line-height: var(--lh-title);
+  letter-spacing: 0;
 }
 
 .intro p,
 .view-copy p,
 .reserve-copy p {
+  max-width: var(--measure);
   margin: 0;
   color: var(--muted);
-  font-size: clamp(17px, 1.6vw, 21px);
-  line-height: 1.78;
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: var(--lh-body);
 }
 
 .menu-section {
@@ -325,8 +340,8 @@ textarea {
 }
 
 .menu-grid div {
-  min-height: 220px;
-  padding: 26px;
+  min-height: 210px;
+  padding: 24px;
 }
 
 .menu-grid span,
@@ -336,15 +351,18 @@ textarea {
 }
 
 .menu-grid h3 {
-  margin: 42px 0 12px;
-  font-size: clamp(26px, 3vw, 40px);
-  line-height: 1.08;
+  margin: 34px 0 12px;
+  max-width: 11em;
+  font-size: clamp(24px, 2.4vw, 34px);
+  line-height: var(--lh-title);
 }
 
 .menu-grid p {
+  max-width: 32ch;
   margin: 0;
   color: var(--muted);
-  line-height: 1.72;
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: var(--lh-body);
 }
 
 .view-section {
@@ -379,6 +397,7 @@ textarea {
 }
 
 .view-copy p {
+  max-width: var(--measure);
   color: rgba(255, 249, 237, 0.76);
 }
 
@@ -412,7 +431,7 @@ textarea {
 
 .reserve-links a {
   display: grid;
-  min-height: 300px;
+  min-height: 260px;
   padding: 24px;
   border: 1px solid rgba(7, 50, 54, 0.16);
   border-radius: 28px;
@@ -427,15 +446,17 @@ textarea {
 
 .reserve-links strong {
   align-self: end;
-  font-size: clamp(28px, 3.2vw, 44px);
-  line-height: 1;
+  font-size: clamp(25px, 2.8vw, 38px);
+  line-height: var(--lh-tight);
 }
 
 .reserve-links em {
   margin-top: 12px;
   color: var(--muted);
+  max-width: 28ch;
+  font-size: clamp(15px, 1.1vw, 17px);
   font-style: normal;
-  line-height: 1.55;
+  line-height: var(--lh-body);
 }
 
 .links-section {
@@ -450,7 +471,7 @@ textarea {
 
 .link-grid a {
   display: grid;
-  min-height: 280px;
+  min-height: 240px;
   padding: 26px;
   border: 1px solid var(--line);
   border-radius: 26px;
@@ -461,15 +482,17 @@ textarea {
 
 .link-grid strong {
   align-self: end;
-  font-size: clamp(34px, 4vw, 56px);
-  line-height: 1;
+  font-size: clamp(29px, 3.2vw, 44px);
+  line-height: var(--lh-tight);
 }
 
 .link-grid em {
   margin-top: 10px;
   color: var(--muted);
+  max-width: 28ch;
+  font-size: clamp(15px, 1.1vw, 17px);
   font-style: normal;
-  line-height: 1.5;
+  line-height: var(--lh-body);
 }
 
 .site-footer {
@@ -479,6 +502,7 @@ textarea {
   padding: 28px clamp(20px, 5vw, 72px);
   background: #0f1515;
   color: rgba(255, 249, 237, 0.74);
+  line-height: 1.5;
 }
 
 .site-footer strong {
@@ -502,6 +526,11 @@ textarea {
     margin: 0 clamp(20px, 5vw, 72px) 32px;
   }
 
+  .hero-content {
+    width: min(760px, 100%);
+    padding-top: 140px;
+  }
+
   .intro,
   .menu-grid,
   .view-section,
@@ -520,7 +549,26 @@ textarea {
 
 @media (max-width: 640px) {
   .hero h1 {
-    font-size: clamp(42px, 13vw, 64px);
+    max-width: 8.5em;
+    font-size: clamp(34px, 11vw, 48px);
+    line-height: 1.12;
+  }
+
+  .hero p:not(.eyebrow) {
+    font-size: 16px;
+  }
+
+  .intro h2,
+  .section-heading h2,
+  .view-copy h2,
+  .reserve-copy h2 {
+    font-size: clamp(26px, 8vw, 34px);
+  }
+
+  .menu-grid h3,
+  .reserve-links strong,
+  .link-grid strong {
+    font-size: clamp(24px, 7vw, 31px);
   }
 
   .hero-actions,
