@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aloha Ono is a Gwangalli ocean-view brunch and dining place in Busan."
+    />
+    <title>Aloha Ono | Gwangalli Ocean Brunch</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Aloha Ono home">
+        <span class="brand-mark">AO</span>
+        <span>Aloha Ono</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#menu" data-i18n="navMenu">Menu</a>
+        <a href="#view" data-i18n="navView">View</a>
+        <a href="#reserve" data-i18n="navReserve">Reserve</a>
+        <a href="#links" data-i18n="navLinks">Links</a>
+      </nav>
+      <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">KR</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <img class="hero-image" src="./assets/ocean-table.jpg" alt="Brunch table with Gwangalli beach view" />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="heroEyebrow">Gwangalli · Ocean View · Brunch</p>
+          <h1 data-i18n="heroTitle">A slow table facing the Gwangalli sea.</h1>
+          <p data-i18n="heroCopy">
+            Aloha Ono is a warm brunch and dining spot where plates, coffee, and the Busan shoreline meet in one relaxed rhythm.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#reserve" data-i18n="heroReserve">Make a reservation</a>
+            <a class="button secondary" href="#menu" data-i18n="heroExplore">Explore the table</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Aloha Ono summary">
+          <span data-i18n="cardLabel">Today at Aloha Ono</span>
+          <strong data-i18n="cardTitle">Beach-side brunch</strong>
+          <p data-i18n="cardCopy">Fresh plates, soft light, and a Gwangalli view for a slower day in Busan.</p>
+        </aside>
+      </section>
+
+      <section class="intro">
+        <div>
+          <span class="section-kicker">Aloha Mood</span>
+          <h2 data-i18n="introTitle">A small pause above the beach.</h2>
+        </div>
+        <p data-i18n="introCopy">
+          The page is built around the actual photos of Aloha Ono: the ocean seen from the table, colorful brunch plates, and the soft island mood inside the space.
+        </p>
+      </section>
+
+      <section id="menu" class="menu-section">
+        <div class="section-heading">
+          <span class="section-kicker">Table</span>
+          <h2 data-i18n="menuTitle">Plates with color, texture, and a clean finish.</h2>
+        </div>
+        <div class="menu-grid">
+          <article>
+            <img src="./assets/acai-bowl.jpg" alt="A colorful acai bowl with berries and orchid" />
+            <div>
+              <span>01</span>
+              <h3 data-i18n="menuOneTitle">Acai Bowl</h3>
+              <p data-i18n="menuOneCopy">Fruit, granola, and a vivid tropical tone for a light start.</p>
+            </div>
+          </article>
+          <article>
+            <img src="./assets/brunch-plate.jpg" alt="Brunch plate with eggs and toast" />
+            <div>
+              <span>02</span>
+              <h3 data-i18n="menuTwoTitle">Brunch Plate</h3>
+              <p data-i18n="menuTwoCopy">A balanced plate for late mornings and long conversations.</p>
+            </div>
+          </article>
+          <article>
+            <img src="./assets/chicken-salad.jpg" alt="Chicken salad plate" />
+            <div>
+              <span>03</span>
+              <h3 data-i18n="menuThreeTitle">Fresh Salad</h3>
+              <p data-i18n="menuThreeCopy">Clean greens, savory protein, and a bright table mood.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="view" class="view-section">
+        <div class="view-image">
+          <img src="./assets/hero-gwangalli.jpg" alt="Gwangalli bridge and sea view" />
+        </div>
+        <div class="view-copy">
+          <span class="section-kicker">Gwangalli View</span>
+          <h2 data-i18n="viewTitle">The view is part of the menu.</h2>
+          <p data-i18n="viewCopy">
+            Aloha Ono belongs to the pace of Gwangalli: sea, bridge, sunlight, and a table that makes the city feel softer.
+          </p>
+          <div class="view-points">
+            <span data-i18n="viewPointOne">Ocean-facing mood</span>
+            <span data-i18n="viewPointTwo">Brunch and coffee</span>
+            <span data-i18n="viewPointThree">Busan travel stop</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="reserve" class="reserve-section">
+        <div class="reserve-copy">
+          <span class="section-kicker">Reservation</span>
+          <h2 data-i18n="reserveTitle">Prepare your visit request.</h2>
+          <p data-i18n="reserveCopy">
+            This static page does not store personal data. Fill in the form, copy the request, then continue through Google, Instagram, or Naver.
+          </p>
+        </div>
+        <form class="reserve-form" data-reserve-form>
+          <label>
+            <span data-i18n="fieldName">Name</span>
+            <input name="name" type="text" autocomplete="name" placeholder="Kim" />
+          </label>
+          <label>
+            <span data-i18n="fieldDate">Date</span>
+            <input name="date" type="date" />
+          </label>
+          <label>
+            <span data-i18n="fieldTime">Time</span>
+            <input name="time" type="time" />
+          </label>
+          <label>
+            <span data-i18n="fieldPeople">Guests</span>
+            <input name="people" type="number" min="1" max="12" value="2" />
+          </label>
+          <label class="full">
+            <span data-i18n="fieldMemo">Memo</span>
+            <textarea name="memo" rows="4" placeholder="Window seat, birthday, stroller, etc."></textarea>
+          </label>
+          <div class="reserve-actions">
+            <button class="button primary" type="submit" data-i18n="copyRequest">Copy request</button>
+            <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=%EC%95%8C%EB%A1%9C%ED%95%98%EC%98%A4%EB%85%B8%20%EA%B4%91%EC%95%88%EB%A6%AC" target="_blank" rel="noopener noreferrer" data-i18n="openGoogle">Open Google</a>
+            <a class="button secondary" href="https://www.instagram.com/explore/search/keyword/?q=alohaono" target="_blank" rel="noopener noreferrer" data-i18n="openInstagram">Open Instagram</a>
+            <a class="button secondary" href="https://search.naver.com/search.naver?query=%EA%B4%91%EC%95%88%EB%A6%AC%20%EC%95%8C%EB%A1%9C%ED%95%98%EC%98%A4%EB%85%B8" target="_blank" rel="noopener noreferrer" data-i18n="openNaver">Open Naver</a>
+          </div>
+          <output class="reserve-output" data-reserve-output></output>
+        </form>
+      </section>
+
+      <section id="links" class="links-section">
+        <div class="section-heading">
+          <span class="section-kicker">Find Us</span>
+          <h2 data-i18n="linksTitle">Continue from search to visit.</h2>
+        </div>
+        <div class="link-grid">
+          <a href="https://www.google.com/maps/search/?api=1&query=%EC%95%8C%EB%A1%9C%ED%95%98%EC%98%A4%EB%85%B8%20%EA%B4%91%EC%95%88%EB%A6%AC" target="_blank" rel="noopener noreferrer">
+            <span>01</span>
+            <strong>Google</strong>
+            <em data-i18n="googleCopy">Map search and route check</em>
+          </a>
+          <a href="https://www.instagram.com/explore/search/keyword/?q=alohaono" target="_blank" rel="noopener noreferrer">
+            <span>02</span>
+            <strong>Instagram</strong>
+            <em data-i18n="instagramCopy">Photos, mood, and updates</em>
+          </a>
+          <a href="https://search.naver.com/search.naver?query=%EA%B4%91%EC%95%88%EB%A6%AC%20%EC%95%8C%EB%A1%9C%ED%95%98%EC%98%A4%EB%85%B8" target="_blank" rel="noopener noreferrer">
+            <span>03</span>
+            <strong>Naver</strong>
+            <em data-i18n="naverCopy">Korean search and local info</em>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>Aloha Ono</strong>
+      <span data-i18n="footerCopy">Gwangalli, Busan · Ocean brunch and dining</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
