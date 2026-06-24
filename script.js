@@ -4,40 +4,37 @@ const translations = {
     navView: "View",
     navReserve: "Reserve",
     navLinks: "Links",
-    heroEyebrow: "Gwangalli · Ocean View · Brunch",
-    heroTitle: "A slow table facing the Gwangalli sea.",
+    heroEyebrow: "Hawaiian Restaurant · Gwangalli",
+    heroTitle: "Aloha means hello. Ono means delicious.",
     heroCopy:
-      "Aloha Ono is a warm brunch and dining spot where plates, coffee, and the Busan shoreline meet in one relaxed rhythm.",
+      "Aloha Ono serves Hawaiian-inspired food with a Gwangalli ocean view, bringing a warm island greeting and a delicious table to Busan.",
     heroReserve: "Make a reservation",
     heroExplore: "Explore the table",
     cardLabel: "Today at Aloha Ono",
-    cardTitle: "Beach-side brunch",
-    cardCopy: "Fresh plates, soft light, and a Gwangalli view for a slower day in Busan.",
-    introTitle: "A small pause above the beach.",
+    cardTitle: "Hawaiian food by the sea",
+    cardCopy: "Island mood, colorful plates, and a Gwangalli view come together at one table.",
+    introTitle: "A greeting that becomes a delicious meal.",
     introCopy:
-      "The page is built around the actual photos of Aloha Ono: the ocean seen from the table, colorful brunch plates, and the soft island mood inside the space.",
-    menuTitle: "Plates with color, texture, and a clean finish.",
+      "The name joins Aloha, Hawaii's warm greeting, with Ono, the Hawaiian word for delicious. Aloha Ono is a Hawaiian restaurant that serves that meaning through food, color, and a relaxed ocean-side mood.",
+    menuTitle: "Hawaiian plates made bright, fresh, and satisfying.",
     menuOneTitle: "Acai Bowl",
-    menuOneCopy: "Fruit, granola, and a vivid tropical tone for a light start.",
-    menuTwoTitle: "Brunch Plate",
-    menuTwoCopy: "A balanced plate for late mornings and long conversations.",
-    menuThreeTitle: "Fresh Salad",
-    menuThreeCopy: "Clean greens, savory protein, and a bright table mood.",
-    viewTitle: "The view is part of the menu.",
+    menuOneCopy: "Fruit, granola, and a vivid tropical tone that brings Hawaii's color to the table.",
+    menuTwoTitle: "Hawaiian Brunch",
+    menuTwoCopy: "A generous plate for late mornings, ocean light, and easy conversations.",
+    menuThreeTitle: "Fresh Island Salad",
+    menuThreeCopy: "Clean greens, savory protein, and a fresh island-style balance.",
+    viewTitle: "Hawaiian food with the Gwangalli view.",
     viewCopy:
-      "Aloha Ono belongs to the pace of Gwangalli: sea, bridge, sunlight, and a table that makes the city feel softer.",
-    viewPointOne: "Ocean-facing mood",
-    viewPointTwo: "Brunch and coffee",
-    viewPointThree: "Busan travel stop",
-    reserveTitle: "Prepare your visit request.",
+      "Aloha Ono brings Hawaii's easygoing table culture to Gwangalli: sea, bridge, sunlight, and food made to feel delicious and welcoming.",
+    viewPointOne: "Hawaiian food",
+    viewPointTwo: "Ocean-view table",
+    viewPointThree: "Gwangalli visit",
+    reserveTitle: "Plan your Aloha Ono visit.",
     reserveCopy:
-      "This static page does not store personal data. Fill in the form, copy the request, then continue through Google, Instagram, or Naver.",
-    fieldName: "Name",
-    fieldDate: "Date",
-    fieldTime: "Time",
-    fieldPeople: "Guests",
-    fieldMemo: "Memo",
-    copyRequest: "Copy request",
+      "This page does not collect reservation data. Continue through the official channels below, with Naver booking as the direct reservation route.",
+    googleReserveCopy: "Check directions and store details.",
+    instagramReserveCopy: "See the latest photos and message the shop.",
+    naverReserveCopy: "Reserve through Naver booking.",
     openGoogle: "Open Google",
     openInstagram: "Open Instagram",
     openNaver: "Open Naver",
@@ -45,49 +42,44 @@ const translations = {
     googleCopy: "Map search and route check",
     instagramCopy: "Photos, mood, and updates",
     naverCopy: "Korean search and local info",
-    footerCopy: "Gwangalli, Busan · Ocean brunch and dining",
-    copied: "Reservation request copied. Continue through Google, Instagram, or Naver.",
-    fallback: "Copy this request and send it through your preferred channel.",
+    footerCopy: "Gwangalli, Busan · Hawaiian restaurant",
   },
   ko: {
     navMenu: "메뉴",
     navView: "뷰",
     navReserve: "예약",
     navLinks: "연결",
-    heroEyebrow: "광안리 · 오션뷰 · 브런치",
-    heroTitle: "광안리 바다를 마주한 느린 테이블.",
+    heroEyebrow: "하와이안 레스토랑 · 광안리",
+    heroTitle: "알로하는 인사, 오노는 맛있다는 뜻입니다.",
     heroCopy:
-      "알로하오노는 브런치, 커피, 부산의 해안선이 한 흐름으로 이어지는 광안리 오션뷰 다이닝 공간입니다.",
+      "알로하오노는 하와이의 따뜻한 인사와 맛있는 한 접시를 광안리 바다 앞에서 전하는 하와이안 레스토랑입니다.",
     heroReserve: "예약 준비하기",
     heroExplore: "테이블 보기",
     cardLabel: "오늘의 알로하오노",
-    cardTitle: "바다 앞 브런치",
-    cardCopy: "선명한 플레이트, 부드러운 빛, 광안리 전망이 하루의 속도를 늦춥니다.",
-    introTitle: "해변 위에서 잠시 쉬어가는 시간.",
+    cardTitle: "바다 앞 하와이안 푸드",
+    cardCopy: "하와이안 무드, 컬러풀한 플레이트, 광안리 전망이 한 테이블에 모입니다.",
+    introTitle: "인사가 맛있는 식사가 되는 곳.",
     introCopy:
-      "이 페이지는 알로하오노의 실제 사진을 중심으로 구성했습니다. 테이블에서 보이는 바다, 컬러가 살아 있는 브런치, 공간 안의 부드러운 휴양지 무드를 담았습니다.",
-    menuTitle: "색감과 식감, 깔끔한 마무리가 있는 플레이트.",
+      "알로하오노는 하와이의 인사말 Aloha와 맛있다는 뜻의 Ono를 합친 이름입니다. 그 의미처럼 하와이안 음식을 맛있고 편안하게 제공하는 광안리 레스토랑입니다.",
+    menuTitle: "밝고 신선하게 즐기는 하와이안 플레이트.",
     menuOneTitle: "아사이볼",
-    menuOneCopy: "과일, 그래놀라, 트로피컬한 색감으로 가볍게 시작하는 메뉴입니다.",
-    menuTwoTitle: "브런치 플레이트",
-    menuTwoCopy: "늦은 아침과 긴 대화에 어울리는 균형 잡힌 플레이트입니다.",
-    menuThreeTitle: "프레시 샐러드",
-    menuThreeCopy: "신선한 채소와 단백질, 밝은 테이블 무드를 함께 담았습니다.",
-    viewTitle: "전망도 메뉴의 일부입니다.",
+    menuOneCopy: "과일, 그래놀라, 트로피컬한 색감으로 하와이의 밝은 맛을 담았습니다.",
+    menuTwoTitle: "하와이안 브런치",
+    menuTwoCopy: "늦은 아침, 바다의 빛, 편안한 대화에 어울리는 넉넉한 플레이트입니다.",
+    menuThreeTitle: "프레시 아일랜드 샐러드",
+    menuThreeCopy: "신선한 채소와 단백질을 하와이안 무드로 균형 있게 담았습니다.",
+    viewTitle: "광안리 전망과 함께 즐기는 하와이안 음식.",
     viewCopy:
-      "알로하오노는 광안리의 속도에 맞춰 있습니다. 바다, 다리, 햇빛, 그리고 도시를 조금 부드럽게 만드는 테이블이 있습니다.",
-    viewPointOne: "오션뷰 무드",
-    viewPointTwo: "브런치와 커피",
-    viewPointThree: "부산 여행 코스",
-    reserveTitle: "방문 요청을 준비하세요.",
+      "알로하오노는 하와이의 여유로운 식문화를 광안리로 옮깁니다. 바다, 다리, 햇빛, 그리고 맛있는 음식이 반갑게 맞이합니다.",
+    viewPointOne: "하와이안 음식",
+    viewPointTwo: "오션뷰 테이블",
+    viewPointThree: "광안리 방문 코스",
+    reserveTitle: "알로하오노 방문을 준비하세요.",
     reserveCopy:
-      "이 정적 페이지는 개인정보를 저장하지 않습니다. 내용을 입력하고 예약 요청 문구를 복사한 뒤 Google, Instagram, Naver 중 편한 채널로 이어가면 됩니다.",
-    fieldName: "이름",
-    fieldDate: "날짜",
-    fieldTime: "시간",
-    fieldPeople: "인원",
-    fieldMemo: "메모",
-    copyRequest: "예약 문구 복사",
+      "이 페이지에서는 예약 정보를 수집하지 않습니다. 아래 공식 채널로 이어가며, 실제 예약은 네이버 예약에서 진행할 수 있습니다.",
+    googleReserveCopy: "위치와 매장 정보를 확인합니다.",
+    instagramReserveCopy: "최신 사진과 소식을 보고 문의합니다.",
+    naverReserveCopy: "네이버 예약으로 바로 이동합니다.",
     openGoogle: "Google 열기",
     openInstagram: "Instagram 열기",
     openNaver: "Naver 열기",
@@ -95,9 +87,7 @@ const translations = {
     googleCopy: "지도 검색과 경로 확인",
     instagramCopy: "사진, 분위기, 소식 확인",
     naverCopy: "국내 검색과 지역 정보",
-    footerCopy: "부산 광안리 · 오션 브런치 앤 다이닝",
-    copied: "예약 요청 문구를 복사했습니다. Google, Instagram, Naver 중 편한 채널로 이어가세요.",
-    fallback: "아래 예약 요청을 복사해 원하는 채널로 보내세요.",
+    footerCopy: "부산 광안리 · 하와이안 레스토랑",
   },
 };
 
@@ -117,25 +107,6 @@ const applyLanguage = (lang) => {
 
 document.querySelector("[data-lang-toggle]").addEventListener("click", () => {
   applyLanguage(currentLang === "en" ? "ko" : "en");
-});
-
-const reserveForm = document.querySelector("[data-reserve-form]");
-const reserveOutput = document.querySelector("[data-reserve-output]");
-
-reserveForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const data = new FormData(reserveForm);
-  const message =
-    currentLang === "ko"
-      ? `알로하오노 예약 문의\n이름: ${data.get("name") || "-"}\n날짜: ${data.get("date") || "-"}\n시간: ${data.get("time") || "-"}\n인원: ${data.get("people") || "-"}명\n메모: ${data.get("memo") || "-"}`
-      : `Aloha Ono reservation request\nName: ${data.get("name") || "-"}\nDate: ${data.get("date") || "-"}\nTime: ${data.get("time") || "-"}\nGuests: ${data.get("people") || "-"}\nMemo: ${data.get("memo") || "-"}`;
-
-  try {
-    await navigator.clipboard.writeText(message);
-    reserveOutput.textContent = translations[currentLang].copied;
-  } catch {
-    reserveOutput.textContent = `${translations[currentLang].fallback}\n\n${message}`;
-  }
 });
 
 applyLanguage("en");
