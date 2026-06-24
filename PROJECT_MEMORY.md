@@ -22,12 +22,17 @@ Last updated: 2026-06-24
 - 버튼 클릭 시 한국어로 전환
 - 사진은 사용자가 직접 제공한 다운로드 폴더 사진만 사용
 - 외부 연결 순서: Google -> Instagram -> Naver
-- 예약은 서버 없이 처리한다.
-  - 폼 입력
-  - 예약 요청 문구 생성
-  - 클립보드 복사
-  - Google/Instagram/Naver 중 원하는 채널로 이동
+- 예약/문의는 서버 없이 처리한다.
+  - 입력 폼이나 클립보드 복사는 사용하지 않는다.
+  - Google/Instagram/Naver 외부 채널 카드로 이동한다.
+  - 실제 예약은 Naver booking 링크에서 진행한다.
 - 개인정보는 저장하지 않는다.
+
+## Copy Context
+
+- 알로하오노는 하와이의 인사말 `Aloha`와 맛있다는 뜻의 `Ono`를 합친 이름이다.
+- 하와이안 레스토랑이며, 하와이안 음식을 맛있고 편안하게 제공하는 곳으로 표현한다.
+- 광안리 오션뷰는 강점이지만, 핵심 정체성은 "하와이안 레스토랑"이다.
 
 ## Assets
 
@@ -52,8 +57,20 @@ Last updated: 2026-06-24
 
 - `index.html`: 페이지 구조
 - `styles.css`: 디자인/반응형/타이포그래피
-- `script.js`: 언어 전환, 예약 문구 복사
+- `script.js`: 언어 전환, 외부 링크 주입
 - `README.md`: 간단 안내
+
+## Maintenance Notes
+
+- 외부 링크는 `script.js` 상단 `EXTERNAL_LINKS`에서만 수정한다.
+  - `google`
+  - `instagram`
+  - `naver`
+- 화면 문구는 `script.js`의 `translations.en`, `translations.ko`에서 수정한다.
+- HTML에서 외부 링크 버튼/카드는 `data-external-link="google"` 같은 키만 사용한다.
+- 기본 언어는 `script.js`의 `DEFAULT_LANG`에서 관리한다.
+- 사용자가 언어를 바꾸면 `localStorage`에 저장되어 다음 방문 때 유지된다.
+- 타이포그래피 기준은 `styles.css`의 `:root` 변수와 각 섹션의 `max-width`, `line-height`를 우선 수정한다.
 
 ## Reservation Limitation
 
@@ -66,7 +83,7 @@ Last updated: 2026-06-24
 - Instagram DM
 - Supabase Edge Function + `reservation_requests` 테이블
 
-사용자 요청은 "별도 서버 없이 다 처리"였으므로 현재 버전은 정적 예약 요청 생성 방식으로 구현한다.
+사용자 요청은 "별도 서버 없이 다 처리"였으므로 현재 버전은 외부 예약/문의 채널 연결 방식으로 구현한다.
 
 ## Future Onolab Integration
 

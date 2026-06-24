@@ -1,3 +1,14 @@
+const EXTERNAL_LINKS = {
+  google:
+    "https://www.google.com/maps/search/?api=1&query=%EC%95%8C%EB%A1%9C%ED%95%98%EC%98%A4%EB%85%B8%20%EA%B4%91%EC%95%88%EB%A6%AC",
+  instagram: "https://www.instagram.com/aloha.ono_/",
+  naver:
+    "https://map.naver.com/p/entry/place/2038053181?lng=129.1142551&lat=35.1466536&placePath=/booking?entry=plt&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202606242049&locale=ko&svcName=map_pcv5&entry=plt&searchType=place&c=15.00,0,0,0,dh",
+};
+
+const DEFAULT_LANG = "en";
+const LANGUAGE_STORAGE_KEY = "alohaono-language";
+
 const translations = {
   en: {
     navMenu: "Menu",
@@ -91,12 +102,48 @@ const translations = {
   },
 };
 
-let currentLang = "en";
+let currentLang = DEFAULT_LANG;
+
+const getStoredValue = (key) => {
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+};
+
+const setStoredValue = (key, value) => {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch {
+    // Language persistence is optional; the page still works without storage.
+  }
+};
+
+const getSavedLanguage = () => {
+  const savedLanguage = getStoredValue(LANGUAGE_STORAGE_KEY);
+  return translations[savedLanguage] ? savedLanguage : DEFAULT_LANG;
+};
+
+const updateExternalLinks = () => {
+  document.querySelectorAll("[data-external-link]").forEach((node) => {
+    const linkKey = node.dataset.externalLink;
+    const url = EXTERNAL_LINKS[linkKey];
+    if (url) {
+      node.href = url;
+    }
+  });
+};
 
 const applyLanguage = (lang) => {
   currentLang = lang;
   document.documentElement.lang = lang;
-  document.querySelector("[data-lang-toggle]").textContent = lang === "en" ? "KR" : "EN";
+  setStoredValue(LANGUAGE_STORAGE_KEY, lang);
+
+  const toggle = document.querySelector("[data-lang-toggle]");
+  toggle.textContent = lang === "en" ? "KR" : "EN";
+  toggle.setAttribute("aria-label", lang === "en" ? "Switch to Korean" : "Switch to English");
+
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
     if (translations[lang][key]) {
@@ -109,4 +156,5 @@ document.querySelector("[data-lang-toggle]").addEventListener("click", () => {
   applyLanguage(currentLang === "en" ? "ko" : "en");
 });
 
-applyLanguage("en");
+updateExternalLinks();
+applyLanguage(getSavedLanguage());

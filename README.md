@@ -12,5 +12,6 @@ Static bilingual homepage draft for Aloha Ono.
 
 - Default language: English
 - Language toggle: English/Korean
-- Reservation: static request builder only. No personal data is stored.
+- Reservation/contact: external channel cards only. No personal data is stored.
 - External links are ordered as Google, Instagram, Naver.
+- Update external URLs in `script.js` -> `EXTERNAL_LINKS`.
