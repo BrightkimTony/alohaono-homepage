@@ -11,6 +11,7 @@ const LANGUAGE_STORAGE_KEY = "alohaono-language";
 
 const translations = {
   en: {
+    navHome: "Home",
     navMenu: "Menu",
     navView: "View",
     navReserve: "Reserve",
@@ -40,6 +41,17 @@ const translations = {
     viewPointOne: "Hawaiian food",
     viewPointTwo: "Ocean-view table",
     viewPointThree: "Gwangalli visit",
+    homeReserveTitle: "Ready for a Hawaiian table in Gwangalli?",
+    homeReserveCopy:
+      "Open the reservation page to check the menu board first, then continue through Google, Instagram, or Naver booking.",
+    reservationEyebrow: "Menu first · Reservation next",
+    reservationTitle: "Check the Hawaiian menu, then reserve your table.",
+    reservationCopy:
+      "Review the Aloha Ono menu board first. When you are ready, continue through Google, Instagram, or Naver booking.",
+    menuBoardTitle: "Aloha Ono menu board",
+    menuBoardCopy:
+      "Open the menu in the page, or download the PDF if your browser does not display it clearly.",
+    downloadMenu: "Open menu PDF",
     reserveTitle: "Plan your Aloha Ono visit.",
     reserveCopy:
       "This page does not collect reservation data. Continue through the official channels below, with Naver booking as the direct reservation route.",
@@ -56,6 +68,7 @@ const translations = {
     footerCopy: "Gwangalli, Busan · Hawaiian restaurant",
   },
   ko: {
+    navHome: "홈",
     navMenu: "메뉴",
     navView: "뷰",
     navReserve: "예약",
@@ -85,6 +98,17 @@ const translations = {
     viewPointOne: "하와이안 음식",
     viewPointTwo: "오션뷰 테이블",
     viewPointThree: "광안리 방문 코스",
+    homeReserveTitle: "광안리에서 하와이안 테이블을 준비할까요?",
+    homeReserveCopy:
+      "예약 페이지에서 메뉴판을 먼저 확인한 뒤 Google, Instagram, Naver 예약으로 이어갈 수 있습니다.",
+    reservationEyebrow: "메뉴 확인 · 예약 이동",
+    reservationTitle: "하와이안 메뉴를 확인하고 테이블을 예약하세요.",
+    reservationCopy:
+      "알로하오노 메뉴판을 먼저 확인한 뒤 Google, Instagram, Naver 예약 채널로 이어가세요.",
+    menuBoardTitle: "알로하오노 메뉴판",
+    menuBoardCopy:
+      "페이지에서 메뉴판을 확인하거나, 브라우저에서 잘 보이지 않으면 PDF를 직접 열어보세요.",
+    downloadMenu: "메뉴 PDF 열기",
     reserveTitle: "알로하오노 방문을 준비하세요.",
     reserveCopy:
       "이 페이지에서는 예약 정보를 수집하지 않습니다. 아래 공식 채널로 이어가며, 실제 예약은 네이버 예약에서 진행할 수 있습니다.",
@@ -141,8 +165,10 @@ const applyLanguage = (lang) => {
   setStoredValue(LANGUAGE_STORAGE_KEY, lang);
 
   const toggle = document.querySelector("[data-lang-toggle]");
-  toggle.textContent = lang === "en" ? "KR" : "EN";
-  toggle.setAttribute("aria-label", lang === "en" ? "Switch to Korean" : "Switch to English");
+  if (toggle) {
+    toggle.textContent = lang === "en" ? "KR" : "EN";
+    toggle.setAttribute("aria-label", lang === "en" ? "Switch to Korean" : "Switch to English");
+  }
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
@@ -152,9 +178,12 @@ const applyLanguage = (lang) => {
   });
 };
 
-document.querySelector("[data-lang-toggle]").addEventListener("click", () => {
-  applyLanguage(currentLang === "en" ? "ko" : "en");
-});
+const languageToggle = document.querySelector("[data-lang-toggle]");
+if (languageToggle) {
+  languageToggle.addEventListener("click", () => {
+    applyLanguage(currentLang === "en" ? "ko" : "en");
+  });
+}
 
 updateExternalLinks();
 applyLanguage(getSavedLanguage());
