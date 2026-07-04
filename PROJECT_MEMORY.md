@@ -1,6 +1,6 @@
 # Aloha Ono Homepage Project Memory
 
-Last updated: 2026-06-24
+Last updated: 2026-07-04
 
 ## Start Here
 
@@ -12,8 +12,9 @@ Last updated: 2026-06-24
 
 - 프로젝트명: 알로하오노 홈페이지
 - 로컬 경로: `/Users/kgm/.codex/alohaono-homepage`
-- 목적: 알로하오노 단독 홈페이지를 먼저 만들고, 최종적으로 오노랩 홈페이지 안의 제휴 업체/파트너 영역에 합칠 수 있게 관리한다.
-- 현재 상태: 정적 HTML/CSS/JS 초안, `/home/`과 `/Reservation/` 페이지 분리 완료
+- 목적: 알로하오노를 오노랩 메인과 분리해 단독 브랜드/예약 랜딩으로 운영한다.
+- 현재 상태: 정적 HTML/CSS/JS, `/home/`과 `/reservation/` 페이지 분리 완료
+- 목표 도메인: `https://alohaono.onolab.kr`
 - 서버: 없음
 
 ## Direction
@@ -27,7 +28,7 @@ Last updated: 2026-06-24
   - Google/Instagram/Naver 외부 채널 카드로 이동한다.
   - 실제 예약은 Naver booking 링크에서 진행한다.
 - 개인정보는 저장하지 않는다.
-- Google 광고용 랜딩은 `/Reservation/`을 사용한다.
+- Google 광고용 랜딩은 `/reservation/`을 사용한다.
   - 메뉴판을 먼저 보여준다.
   - 아래에 Google, Instagram, Naver 연결 카드를 둔다.
   - 별도 예약 DB나 백엔드는 붙이지 않는다.
@@ -62,7 +63,7 @@ Last updated: 2026-06-24
 
 - `index.html`: `/home/`으로 보내는 루트 리다이렉트
 - `home/index.html`: 일반 소개 페이지
-- `Reservation/index.html`: 메뉴판 + 예약/외부 채널 랜딩 페이지
+- `reservation/index.html`: 메뉴판 + 예약/외부 채널 랜딩 페이지
 - `styles.css`: 디자인/반응형/타이포그래피
 - `script.js`: 언어 전환, 외부 링크 주입
 - `README.md`: 간단 안내
@@ -72,7 +73,7 @@ Last updated: 2026-06-24
 - `/home/`
   - 알로하오노의 일반 홈페이지
   - 브랜드 의미, 하와이안 메뉴, 광안리 전망, 예약 CTA를 보여준다.
-- `/Reservation/`
+- `/reservation/`
   - 광고/예약 랜딩 페이지
   - 메뉴판 PDF를 먼저 보여주고, Google -> Instagram -> Naver 순서로 연결한다.
 - `/`
@@ -89,7 +90,15 @@ Last updated: 2026-06-24
 - 기본 언어는 `script.js`의 `DEFAULT_LANG`에서 관리한다.
 - 사용자가 언어를 바꾸면 `localStorage`에 저장되어 다음 방문 때 유지된다.
 - 타이포그래피 기준은 `styles.css`의 `:root` 변수와 각 섹션의 `max-width`, `line-height`를 우선 수정한다.
-- 메뉴판을 교체할 때는 새 PDF를 `assets/alohaono-menu-may.pdf` 이름으로 덮어쓰거나, `Reservation/index.html`의 iframe/download 링크를 함께 수정한다.
+- 메뉴판을 교체할 때는 새 PDF를 `assets/alohaono-menu-may.pdf` 이름으로 덮어쓰거나, `reservation/index.html`의 iframe/download 링크를 함께 수정한다.
+
+## Current Split Plan
+
+- GitHub repo: `BrightkimTony/alohaono-homepage`
+- GitHub Pages source: `main` branch root
+- Custom domain file: `CNAME` -> `alohaono.onolab.kr`
+- DNS 필요 작업: Hosting.kr에서 `alohaono` CNAME을 `BrightkimTony.github.io`로 추가한다.
+- 오노랩 메인에서는 알로하오노 파트너 카드와 상단 `제휴` 메뉴를 제거하고, 필요하면 나중에 "협업 사례" 정도로만 다시 연결한다.
 
 ## Refactor Notes
 

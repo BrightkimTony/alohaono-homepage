@@ -2,6 +2,12 @@
 
 Static bilingual homepage for Aloha Ono.
 
+Production subdomain target:
+
+```text
+https://alohaono.onolab.kr
+```
+
 ## Open
 
 ```text
@@ -12,7 +18,7 @@ http://127.0.0.1:4174/home/
 
 - `/`: redirects to `/home/`
 - `/home/`: general brand, menu preview, view, and introduction page
-- `/Reservation/`: Google Ads-friendly reservation landing page with the menu PDF, Google, Instagram, and Naver links
+- `/reservation/`: Google Ads-friendly reservation landing page with the menu PDF, Google, Instagram, and Naver links
 
 ## Notes
 

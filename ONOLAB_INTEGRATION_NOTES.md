@@ -1,16 +1,25 @@
 # Aloha Ono and Onolab Integration Notes
 
-Last updated: 2026-06-24
+Last updated: 2026-07-04
 
 ## Conclusion
 
-오노랩 홈페이지에 `제휴` 또는 `Partners` 섹션을 따로 만들고, 그 안의 `Aloha Ono` 카드를 누르면 알로하오노 페이지로 이동하게 처리할 수 있다.
+오노랩 홈페이지와 알로하오노는 일단 분리 운영한다.
 
-현재는 알로하오노 페이지를 독립 프로젝트로 관리하고, 최종 단계에서 오노랩 홈페이지에 연결하는 방식이 맞다.
+알로하오노는 별도 GitHub Pages repo와 `alohaono.onolab.kr` 서브도메인으로 운영하고, 오노랩 메인에서는 파트너 카드와 상단 `제휴` 메뉴를 제거한다.
 
 ## Recommended Structure
 
-### Option A: Separate Site Link
+### Current: Separate Subdomain
+
+알로하오노 단독 사이트:
+
+- `https://alohaono.onolab.kr`
+- GitHub repo: `BrightkimTony/alohaono-homepage`
+- Pages source: `main` branch root
+- DNS: Hosting.kr에서 `alohaono` CNAME -> `BrightkimTony.github.io`
+
+### Previous Option A: Separate Site Link
 
 오노랩 홈페이지:
 
@@ -23,7 +32,7 @@ Last updated: 2026-06-24
 - 오노랩과 알로하오노를 따로 배포/수정할 수 있다.
 - Google Ads 랜딩 URL을 독립적으로 관리하기 쉽다.
 
-### Option B: Onolab Subpath
+### Previous Option B: Onolab Subpath
 
 오노랩 홈페이지 안에 알로하오노 정적 파일을 포함:
 
@@ -43,12 +52,12 @@ Last updated: 2026-06-24
 ## Current Aloha Ono Routes
 
 - `/home/`: 일반 홈페이지
-- `/Reservation/`: 메뉴판 + Google/Instagram/Naver 예약 연결
+- `/reservation/`: 메뉴판 + Google/Instagram/Naver 예약 연결
 - `/`: `/home/`으로 리다이렉트
 
 ## Google Ads Landing
 
-광고용 URL은 일반 홈페이지보다 `/Reservation/`을 권장한다.
+광고용 URL은 일반 홈페이지보다 `/reservation/`을 권장한다.
 
 이유:
 
@@ -67,11 +76,11 @@ Last updated: 2026-06-24
 - 하와이안 음식을 맛있고 편안하게 제공
 - 바다 전망은 강점이지만, 브랜드 정체성은 음식과 하와이안 무드가 중심
 
-## Next Integration Step
+## Next Split Step
 
-오노랩 홈페이지를 수정할 때 할 일:
+남은 일:
 
-1. 오노랩 홈페이지에 `Partners` 또는 `제휴` 섹션을 추가한다.
-2. 알로하오노 카드에 대표 이미지, 짧은 설명, CTA를 넣는다.
-3. 카드 링크를 알로하오노 `/home/` 또는 `/Reservation/` 중 목적에 맞게 연결한다.
-4. 광고용 CTA는 반드시 `/Reservation/`으로 보낸다.
+1. GitHub에 알로하오노 repo를 만들고 Pages를 켠다.
+2. Hosting.kr DNS에 `alohaono` CNAME을 추가한다.
+3. GitHub Pages 커스텀 도메인을 `alohaono.onolab.kr`로 설정한다.
+4. 오노랩 메인에서 알로하오노 파트너 섹션/메뉴를 제거한다.
